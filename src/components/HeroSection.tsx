@@ -26,12 +26,12 @@ const HeroSection = () => {
         <p className="text-accent font-medium tracking-[0.2em] uppercase text-sm mb-4 animate-fade-in">
           Barcelona · El Clot
         </p>
-        <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 animate-fade-in leading-[1.1]">
+        <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 animate-fade-in leading-[1.1]">
           Restaurante
           <br />
           <span className="text-primary">Sol</span>
         </h1>
-        <p className="text-lg md:text-xl text-muted-foreground mb-10 font-light leading-relaxed max-w-md animate-fade-in" style={{ animationDelay: '0.2s' }}>
+        <p className="text-lg md:text-xl text-primary-foreground/70 mb-10 font-light leading-relaxed max-w-md animate-fade-in" style={{ animationDelay: '0.2s' }}>
           {t('hero.claim')}
         </p>
         <div className="flex flex-col sm:flex-row items-start gap-3 animate-fade-in" style={{ animationDelay: '0.4s' }}>
