@@ -6,9 +6,10 @@ const HeroSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="home" className="relative min-h-screen flex items-end bg-background overflow-hidden">
-      {/* Decorative background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-secondary/30" />
+    <section id="home" className="relative min-h-screen flex items-end overflow-hidden" style={{ background: 'linear-gradient(135deg, hsl(25 20% 16%) 0%, hsl(25 18% 22%) 40%, hsl(33 20% 30%) 100%)' }}>
+      {/* Decorative warm accents */}
+      <div className="absolute top-0 left-0 w-72 h-72 rounded-full bg-accent/10 blur-3xl -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-20 left-1/3 w-96 h-96 rounded-full bg-accent/5 blur-3xl" />
 
       {/* Image - right side on desktop, top on mobile */}
       <div className="absolute top-0 right-0 w-full h-[45vh] md:h-full md:w-[55%] overflow-hidden">
@@ -17,7 +18,7 @@ const HeroSection = () => {
           alt="Platos mediterráneos del Restaurante Sol"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent md:bg-gradient-to-r md:from-background md:via-background/40 md:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(25_20%_16%)] via-[hsl(25_20%_16%/0.6)] to-transparent md:bg-gradient-to-r md:from-[hsl(25_20%_16%)] md:via-[hsl(25_18%_22%/0.5)] md:to-transparent" />
       </div>
 
       {/* Content - left side */}
