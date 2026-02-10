@@ -43,14 +43,14 @@ const HeroSection = () => {
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 border border-border text-foreground px-8 py-3 rounded-md font-medium hover:bg-secondary transition-colors"
+            className="inline-flex items-center gap-2 border border-primary-foreground/20 text-primary-foreground px-8 py-3 rounded-md font-medium hover:bg-primary-foreground/10 transition-colors"
           >
             <MapPin className="w-4 h-4" />
             {t('hero.cta.contact')}
           </a>
           <a
             href="tel:932454228"
-            className="inline-flex items-center gap-2 border border-border text-foreground px-8 py-3 rounded-md font-medium hover:bg-secondary transition-colors"
+            className="inline-flex items-center gap-2 border border-primary-foreground/20 text-primary-foreground px-8 py-3 rounded-md font-medium hover:bg-primary-foreground/10 transition-colors"
           >
             <Phone className="w-4 h-4" />
             {t('hero.cta.call')}
