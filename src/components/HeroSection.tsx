@@ -8,7 +8,8 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{ background: 'linear-gradient(135deg, hsl(33 30% 90%) 0%, hsl(36 28% 94%) 50%, hsl(33 25% 88%) 100%)' }}
     >
       {/* Warm glowing orbs */}
       <div className="absolute top-20 right-20 w-[600px] h-[600px] rounded-full bg-accent/8 blur-[150px]" />
