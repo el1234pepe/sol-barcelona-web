@@ -1,5 +1,5 @@
 import { useLanguage } from '@/i18n/LanguageContext';
-import { Phone, MapPin } from 'lucide-react';
+import { Phone, MapPin, Sparkles } from 'lucide-react';
 import heroImg from '@/assets/hero-restaurant.jpg';
 
 const HeroSection = () => {
@@ -9,65 +9,73 @@ const HeroSection = () => {
     <section
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{ background: 'linear-gradient(160deg, hsl(25 20% 14%) 0%, hsl(25 18% 20%) 50%, hsl(30 22% 26%) 100%)' }}
+      style={{ background: 'linear-gradient(160deg, hsl(33 28% 30%) 0%, hsl(30 25% 38%) 40%, hsl(28 22% 34%) 100%)' }}
     >
-      {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-accent/8 blur-[120px]" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-primary/6 blur-[100px]" />
-      
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, hsl(36 33% 97%) 1px, transparent 0)', backgroundSize: '40px 40px' }} />
+      {/* Warm glowing orbs */}
+      <div className="absolute top-20 right-20 w-[600px] h-[600px] rounded-full bg-accent/10 blur-[150px]" />
+      <div className="absolute bottom-10 left-10 w-[500px] h-[500px] rounded-full bg-primary/8 blur-[120px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-secondary/10 blur-[100px]" />
 
-      {/* Top decorative line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
+      {/* Dot pattern */}
+      <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, hsl(36 33% 97%) 1px, transparent 0)', backgroundSize: '32px 32px' }} />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-0">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          
+      {/* Top accent line */}
+      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
+
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 py-28 md:py-0">
+        <div className="grid md:grid-cols-[1fr_auto] gap-10 md:gap-20 items-center">
+
           {/* Left: Content */}
           <div className="order-2 md:order-1 text-center md:text-left">
-            <div className="inline-flex items-center gap-3 mb-6 animate-fade-in">
-              <span className="w-8 h-px bg-accent" />
-              <p className="text-accent font-medium tracking-[0.2em] uppercase text-xs">
+            {/* Location badge */}
+            <div className="inline-flex items-center gap-3 mb-8 animate-fade-in bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10 rounded-full px-5 py-2">
+              <MapPin className="w-3.5 h-3.5 text-accent" />
+              <p className="text-primary-foreground/70 font-medium tracking-[0.15em] uppercase text-xs">
                 Barcelona · El Clot
               </p>
-              <span className="w-8 h-px bg-accent" />
             </div>
 
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-2 animate-fade-in leading-[1.05]">
+            <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-primary-foreground mb-3 animate-fade-in leading-[1]">
               Restaurante
             </h1>
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-accent mb-8 animate-fade-in leading-[1.05]">
-              Sol
-            </h1>
-
-            <div className="flex items-center gap-3 mb-8 justify-center md:justify-start animate-fade-in" style={{ animationDelay: '0.15s' }}>
-              <span className="w-12 h-px bg-primary-foreground/20" />
-              <span className="text-primary-foreground/30 text-xs tracking-[0.3em] uppercase font-medium">Est. Barcelona</span>
-              <span className="w-12 h-px bg-primary-foreground/20" />
+            <div className="flex items-center gap-5 justify-center md:justify-start mb-8 animate-fade-in">
+              <span className="hidden sm:block w-16 h-[2px] bg-accent/50" />
+              <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-accent leading-[1]">
+                Sol
+              </h1>
+              <Sparkles className="w-6 h-6 md:w-8 md:h-8 text-accent/60" />
             </div>
 
-            <p className="text-lg text-primary-foreground/60 mb-10 font-light leading-relaxed max-w-md mx-auto md:mx-0 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            {/* Decorative separator */}
+            <div className="flex items-center gap-4 mb-8 justify-center md:justify-start animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <span className="text-accent text-lg">✦</span>
+              <span className="w-20 h-px bg-gradient-to-r from-accent/40 to-transparent" />
+              <span className="text-primary-foreground/40 text-xs tracking-[0.3em] uppercase font-medium">Cocina Mediterránea</span>
+              <span className="w-20 h-px bg-gradient-to-l from-accent/40 to-transparent" />
+              <span className="text-accent text-lg">✦</span>
+            </div>
+
+            <p className="text-xl md:text-2xl text-primary-foreground/60 mb-12 font-light leading-relaxed max-w-lg mx-auto md:mx-0 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               {t('hero.claim')}
             </p>
 
             <div className="flex flex-col sm:flex-row items-center md:items-start gap-3 animate-fade-in" style={{ animationDelay: '0.35s' }}>
               <a
                 href="#menu"
-                className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-3 rounded-md font-medium hover:bg-accent/90 transition-colors"
+                className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-10 py-4 rounded-lg font-semibold text-base hover:bg-accent/90 transition-colors shadow-lg shadow-accent/20"
               >
                 {t('hero.cta.menu')}
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 border border-primary-foreground/15 text-primary-foreground/80 px-8 py-3 rounded-md font-medium hover:bg-primary-foreground/5 transition-colors"
+                className="inline-flex items-center gap-2 bg-primary-foreground/8 backdrop-blur-sm border border-primary-foreground/15 text-primary-foreground px-8 py-4 rounded-lg font-medium hover:bg-primary-foreground/15 transition-colors"
               >
                 <MapPin className="w-4 h-4" />
                 {t('hero.cta.contact')}
               </a>
               <a
                 href="tel:932454228"
-                className="inline-flex items-center gap-2 border border-primary-foreground/15 text-primary-foreground/80 px-8 py-3 rounded-md font-medium hover:bg-primary-foreground/5 transition-colors"
+                className="inline-flex items-center gap-2 bg-primary-foreground/8 backdrop-blur-sm border border-primary-foreground/15 text-primary-foreground px-8 py-4 rounded-lg font-medium hover:bg-primary-foreground/15 transition-colors"
               >
                 <Phone className="w-4 h-4" />
                 {t('hero.cta.call')}
@@ -75,31 +83,44 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right: Framed image with decorative accents */}
+          {/* Right: Image composition */}
           <div className="order-1 md:order-2 flex justify-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
             <div className="relative">
-              {/* Decorative frame offset */}
-              <div className="absolute -top-4 -right-4 w-full h-full border-2 border-accent/20 rounded-lg" />
-              <div className="absolute -bottom-4 -left-4 w-full h-full border border-primary-foreground/10 rounded-lg" />
-              
-              {/* Corner accents */}
-              <div className="absolute -top-2 -left-2 w-5 h-5 border-t-2 border-l-2 border-accent/40 rounded-tl-sm z-20" />
-              <div className="absolute -bottom-2 -right-2 w-5 h-5 border-b-2 border-r-2 border-accent/40 rounded-br-sm z-20" />
+              {/* Decorative ring behind image */}
+              <div className="absolute -inset-8 border border-accent/15 rounded-2xl rotate-3" />
+              <div className="absolute -inset-4 border border-primary-foreground/8 rounded-xl -rotate-2" />
+
+              {/* Glow behind image */}
+              <div className="absolute -inset-6 bg-accent/10 rounded-2xl blur-2xl" />
+
+              {/* Corner ornaments */}
+              <div className="absolute -top-3 -left-3 w-8 h-8 border-t-2 border-l-2 border-accent/50 rounded-tl-lg z-20" />
+              <div className="absolute -top-3 -right-3 w-8 h-8 border-t-2 border-r-2 border-accent/50 rounded-tr-lg z-20" />
+              <div className="absolute -bottom-3 -left-3 w-8 h-8 border-b-2 border-l-2 border-accent/50 rounded-bl-lg z-20" />
+              <div className="absolute -bottom-3 -right-3 w-8 h-8 border-b-2 border-r-2 border-accent/50 rounded-br-lg z-20" />
 
               {/* Main image */}
-              <div className="relative w-[280px] h-[380px] sm:w-[320px] sm:h-[420px] md:w-[380px] md:h-[480px] rounded-lg overflow-hidden shadow-2xl">
+              <div className="relative w-[280px] h-[370px] sm:w-[320px] sm:h-[420px] md:w-[360px] md:h-[460px] rounded-xl overflow-hidden shadow-2xl shadow-foreground/30">
                 <img
                   src={heroImg}
                   alt="Platos mediterráneos del Restaurante Sol"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 via-transparent to-foreground/10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-foreground/5" />
+                
+                {/* Overlay text on image */}
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <div className="backdrop-blur-md bg-foreground/20 rounded-lg p-4 border border-primary-foreground/10">
+                    <p className="text-primary-foreground/60 text-xs tracking-[0.2em] uppercase mb-1">Desde Barcelona</p>
+                    <p className="text-primary-foreground font-display text-lg font-semibold">Sabor auténtico</p>
+                  </div>
+                </div>
               </div>
 
-              {/* Floating accent badge */}
-              <div className="absolute -bottom-6 -left-6 bg-accent text-accent-foreground px-4 py-2 rounded-md shadow-lg z-20">
-                <p className="text-xs font-medium tracking-wider uppercase">Cocina</p>
-                <p className="text-sm font-display font-semibold">Mediterránea</p>
+              {/* Floating badge top-right */}
+              <div className="absolute -top-5 -right-5 bg-accent text-accent-foreground px-4 py-3 rounded-xl shadow-xl z-20 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+                <Sparkles className="w-5 h-5 mx-auto mb-1" />
+                <p className="text-[10px] font-bold tracking-wider uppercase">Menú del día</p>
               </div>
             </div>
           </div>
@@ -107,14 +128,15 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden md:flex">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden md:flex flex-col items-center gap-2">
+        <span className="text-primary-foreground/30 text-[10px] tracking-[0.3em] uppercase">Scroll</span>
         <div className="w-6 h-10 border-2 border-primary-foreground/15 rounded-full flex justify-center pt-2">
-          <div className="w-1.5 h-1.5 bg-primary-foreground/30 rounded-full" />
+          <div className="w-1.5 h-1.5 bg-accent/50 rounded-full" />
         </div>
       </div>
 
-      {/* Bottom decorative line */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-foreground/10 to-transparent" />
+      {/* Bottom accent */}
+      <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
     </section>
   );
 };
