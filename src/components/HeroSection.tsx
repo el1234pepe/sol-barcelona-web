@@ -1,5 +1,5 @@
 import { useLanguage } from '@/i18n/LanguageContext';
-import { Phone, MapPin, Sparkles } from 'lucide-react';
+import { Phone, MapPin, Sparkles, CalendarDays, Info } from 'lucide-react';
 import heroImg from '@/assets/hero-restaurant.jpg';
 
 const HeroSection = () => {
@@ -59,10 +59,19 @@ const HeroSection = () => {
               {t('hero.claim')}
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center md:items-start gap-3 animate-fade-in" style={{ animationDelay: '0.35s' }}>
+            <div className="flex flex-col sm:flex-row flex-wrap items-center md:items-start gap-3 animate-fade-in" style={{ animationDelay: '0.35s' }}>
+              <a
+                href="https://reservawebsol.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-10 py-4 rounded-lg font-semibold text-base hover:bg-accent/90 transition-colors shadow-lg shadow-accent/20"
+              >
+                <CalendarDays className="w-4 h-4" />
+                {t('hero.cta.reserve')}
+              </a>
               <a
                 href="#menu"
-                className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-10 py-4 rounded-lg font-semibold text-base hover:bg-accent/90 transition-colors shadow-lg shadow-accent/20"
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-base hover:bg-primary/90 transition-colors"
               >
                 {t('hero.cta.menu')}
               </a>
@@ -80,6 +89,10 @@ const HeroSection = () => {
                 <Phone className="w-4 h-4" />
                 {t('hero.cta.call')}
               </a>
+            </div>
+            <div className="flex items-center gap-2 mt-4 justify-center md:justify-start animate-fade-in" style={{ animationDelay: '0.45s' }}>
+              <Info className="w-3.5 h-3.5 text-accent" />
+              <p className="text-foreground/50 text-sm italic">{t('hero.reserve.note')}</p>
             </div>
           </div>
 
