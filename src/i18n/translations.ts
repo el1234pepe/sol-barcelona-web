@@ -17,6 +17,8 @@ export const translations: Record<string, Record<Language, string>> = {
   'hero.cta.menu': { es: 'Ver carta', ca: 'Veure carta', en: 'View menu' },
   'hero.cta.contact': { es: 'Cómo llegar', ca: 'Com arribar', en: 'How to get here' },
   'hero.cta.call': { es: 'Llamar', ca: 'Trucar', en: 'Call us' },
+  'hero.cta.reserve': { es: 'Reservar', ca: 'Reservar', en: 'Book a table' },
+  'hero.reserve.note': { es: 'No se aceptan reservas en terraza', ca: 'No s\'accepten reserves a la terrassa', en: 'Terrace reservations not accepted' },
 
   // Menu sections
   'menu.title': { es: 'Nuestra Carta', ca: 'La Nostra Carta', en: 'Our Menu' },
